@@ -1,0 +1,20 @@
+{
+  "name": "liri",
+  "version": "1.0.0",
+  "description": "A command line bot made in node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sastolarski/liri.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sastolarski/liri/issues"
+  },
+  "homepage": "https://github.com/sastolarski/liri#readme"
+}
