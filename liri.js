@@ -97,7 +97,7 @@ else if (command === "movie-this" && searchTerm) {
             console.log("Country: " + body.Country);
             console.log("Language: " + body.Language);
             console.log("IMdB Rating: " + body.imdbRating);
-            console.log("Rotten Tomatoes Rating: " + JSON.stringify(body.Ratings[1]).substring(37, 40));
+            console.log("Rotten Tomatoes Rating: " + body.Ratings[1].Value);
             console.log("-----------------------")
         }
     });
@@ -118,7 +118,7 @@ else if (command === "movie-this" && !searchTerm) {
             console.log("Country: " + body.Country);
             console.log("Language: " + body.Language);
             console.log("IMdB Rating: " + body.imdbRating);
-            console.log("Rotten Tomatoes Rating: " + JSON.stringify(body.Ratings[1]).substring(37, 40));
+            console.log("Rotten Tomatoes Rating: " + body.Ratings[1].Value);
             console.log("-----------------------")
         }
     });
