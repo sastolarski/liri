@@ -10,15 +10,14 @@ var fs = require("fs");
 var spotify = new Spotify(keys.spotify);
 var client = new Twitter(keys.twitter);
 
-
 var fs = require('fs');
 
-//Stored argument's array
 var nodeArgv = process.argv;
 var command = process.argv[2];
-//movie or song
+
 var searchTerm = "";
-//attaches multiple word arguments
+
+
 for (var i = 3; i < nodeArgv.length; i++) {
     if (i > 3 && i < nodeArgv.length) {
         searchTerm = searchTerm + "+" + nodeArgv[i];
@@ -26,9 +25,6 @@ for (var i = 3; i < nodeArgv.length; i++) {
         searchTerm = searchTerm + nodeArgv[i];
     }
 }
-
-console.log("-----------------------")
-
 
 if (command === "spotify-this-song" && searchTerm) {
 
@@ -39,8 +35,8 @@ if (command === "spotify-this-song" && searchTerm) {
 
                 console.log("Artist: " + songData.artists[0].name);
                 console.log("Song: " + songData.name);
-                console.log("Preview URL: " + songData.preview_url);
                 console.log("Album: " + songData.album.name);
+                console.log("Preview URL: " + songData.preview_url);
                 console.log("-----------------------");
 
             }
@@ -59,8 +55,8 @@ else if (command === "spotify-this-song" && !searchTerm) {
 
                 console.log("Artist: " + songData.artists[0].name);
                 console.log("Song: " + songData.name);
-                console.log("Preview URL: " + songData.preview_url);
                 console.log("Album: " + songData.album.name);
+                console.log("Preview URL: " + songData.preview_url);
                 console.log("-----------------------");
 
             }
@@ -130,6 +126,11 @@ else if (command === "movie-this" && !searchTerm) {
 }
 else if (command === "do-what-it-says") {
 
-    console.log("DoIt.gif")
+    fs.readFile('./random.txt', 'utf8', function (err,data) {
+        if (err) {
+          return console.log(err);
+        }
+        console.log(data);
+      });
 
 }
