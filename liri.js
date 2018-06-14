@@ -130,7 +130,13 @@ else if (command === "do-what-it-says") {
         if (err) {
           return console.log(err);
         }
-        console.log(data);
+        var dataArr = data.split(',');
+
+        console.log(dataArr[0], dataArr[1]);
+        
       });
 
 }
+
+
+
